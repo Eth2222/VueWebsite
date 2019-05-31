@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <CardTable />
+    <CardTable v-bind:projects="projects"/>
   </div>
 </template>
 
@@ -15,6 +15,26 @@ export default {
   components: {
     HelloWorld,
     CardTable
+  },
+  data() {
+    return {
+      projects:[
+        {
+          id: 1,
+          photo: "./src/assets/logo.png",
+          title:"my First Project",
+          Description: "this is a long description about what was involved. Here is another sentence about things that were required",
+          tags: ["Marine", "Coding", "Mechanical Design" ]
+        },
+        {
+          id: 2,
+          photo: "./src/assets/logo.png",
+          title:"my second Project",
+          Description: "this is a long description about what was involved. Here is another sentence about things that were required",
+          tags: ["marine", "Coding", "Mechanical Design" ]
+        }
+      ]
+    }
   }
 }
 </script>
