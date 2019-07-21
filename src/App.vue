@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SkillsGraph/>
     <CardTable v-bind:projects="projects"/>
   </div>
 </template>
@@ -9,12 +8,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import CardTable from './components/CardTable.vue'
+import SkillsGraph from './components/SkillsGraph'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    CardTable
+    CardTable,
+    SkillsGraph
   },
   data() {
     return {
